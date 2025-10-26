@@ -1,6 +1,6 @@
-import "../css/login.css";
-import ComponenteFormBtn from "../utilidades/Formulario/ComponenteFormBtn";
-import ComponenteFormGroup from "../utilidades/Formulario/ComponenteFormGroup";
+import "../../styles/login.css";
+import FormButton from "../shared/forms/FormButton";
+import FormGroup from "../shared/forms/FormGroup";
 export default function ComponenteLogin(){
     return(
         <div className="container py-3">
@@ -8,10 +8,10 @@ export default function ComponenteLogin(){
             <form>
                 <img className="mb-4 bg-primary rounded-circle" src={require("../img/2.png")} alt="" style={{maxWidth:"200px", maxHeight:"200px"}} />
                 <h1 className="h2 mb-3 font-weight-normal">Sistema de Ventas JCUBA</h1>                    
-                <ComponenteFormGroup valor="Correo" type="text" entidad="usuario"></ComponenteFormGroup>
-                <ComponenteFormGroup valor="Contraseña" type="password" entidad="usuario"></ComponenteFormGroup>
+                <FormGroup valor="Correo" type="text" entidad="usuario"></FormGroup>
+                <FormGroup valor="Contraseña" type="password" entidad="usuario"></FormGroup>
 
-                <ComponenteFormBtn ruta="usuario/listar" /> 
+                <FormButton ruta="usuario/listar" /> 
 
                 <p className="my-1  text-dark">&copy;  2022 - JCUBA</p>
             </form>

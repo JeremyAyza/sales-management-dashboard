@@ -1,72 +1,72 @@
-import ComponenteActualizarCliente from "./cliente/ComponenteActualizarCliente";
-import ComponenteListarCliente from "./cliente/ComponenteListarCliente";
-import ComponenteRegistrarCliente from "./cliente/ComponenteRegistrarCliente";
-import ComponenteLogin from "./login/ComponenteLogin";
-import ComponenteActualizarProducto from "./producto/ComponenteActualizarProducto";
-import ComponenteListarProducto from "./producto/ComponenteListarProducto";
-import ComponenteRegistrarProducto from "./producto/ComponenteRegistrarProducto";
-import ComponenteActualizarProveedor from "./proveedor/ComponenteActualizarProveedor";
-import ComponenteListarProveedor from "./proveedor/ComponenteListarProveedor";
-import ComponenteRegistrarProveedor from "./proveedor/ComponenteRegistrarProveedor";
-import ComponenteActualizarUsuario from "./usuario/ComponenteActualizarUsuario";
-import ComponenteListarUsuario from "./usuario/ComponenteListarUsuario";
-import ComponenteRegistrarUsuario from "./usuario/ComponenteRegistrarUsuario";
-import ComponenteDetalle from "./ventas/ComponenteDetalle";
-import ComponenteNuevaVenta from "./ventas/ComponenteNuevaVenta";
-import ComponenteVentas from "./ventas/ComponenteVentas";
+import UpdateCustomer from "./components/customers/UpdateCustomer";
+import CustomerList from "./components/customers/CustomerList";
+import CreateCustomer from "./components/customers/CreateCustomer";
+import Login from "./components/auth/Login";
+import UpdateProduct from "./components/products/UpdateProduct";
+import ProductList from "./components/products/ProductList";
+import CreateProduct from "./components/products/CreateProduct";
+import UpdateProvider from "./components/providers/UpdateProvider";
+import ProviderList from "./components/providers/ProviderList";
+import CreateProvider from "./components/providers/CreateProvider";
+import UpdateUser from "./components/users/UpdateUser";
+import UserList from "./components/users/UserList";
+import CreateUser from "./components/users/CreateUser";
+import SaleDetail from "./components/sales/SaleDetail";
+import CreateSale from "./components/sales/CreateSale";
+import SaleList from "./components/sales/SaleList";
 
 
-const rutas = 
+const routes = 
     [
         {
-				path: '/', element: ComponenteLogin
+            path: '/', element: Login
         },
         {
-            path: '/usuario/registrar', element: ComponenteRegistrarUsuario
+            path: '/usuario/registrar', element: CreateUser
         },
         {
-            path: '/usuario/listar', element: ComponenteListarUsuario
+            path: '/usuario/listar', element: UserList
         },
         {
-            path: '/usuario/actualizar', element: ComponenteActualizarUsuario
+            path: '/usuario/actualizar', element: UpdateUser
         },
         {
-            path: '/producto/actualizar', element: ComponenteActualizarProducto
+            path: '/producto/actualizar', element: UpdateProduct
         },
         {
-            path: '/producto/registrar', element: ComponenteRegistrarProducto
+            path: '/producto/registrar', element: CreateProduct
         },
         {
-            path: '/producto/listar', element: ComponenteListarProducto
+            path: '/producto/listar', element: ProductList
         },
         {
-            path: '/cliente/actualizar', element: ComponenteActualizarCliente
+            path: '/cliente/actualizar', element: UpdateCustomer
         },
         {
-            path: '/cliente/registrar', element: ComponenteRegistrarCliente
+            path: '/cliente/registrar', element: CreateCustomer
         },
         {
-            path: '/cliente/listar', element: ComponenteListarCliente
+            path: '/cliente/listar', element: CustomerList
         },
         {
-            path: '/proveedor/listar', element: ComponenteListarProveedor
+            path: '/proveedor/listar', element: ProviderList
         },
         {
-            path: '/proveedor/registrar', element: ComponenteRegistrarProveedor
+            path: '/proveedor/registrar', element: CreateProvider
         },
         {
-            path: '/proveedor/actualizar', element: ComponenteActualizarProveedor
+            path: '/proveedor/actualizar', element: UpdateProvider
         },
         {
-            path: '/venta/nuevaventa', element: ComponenteNuevaVenta
+            path: '/venta/nuevaventa', element: CreateSale
         },
         {
-            path: '/venta/ventas', element: ComponenteVentas
+            path: '/venta/ventas', element: SaleList
         },
         {
-            path: '/venta/detalle', element: ComponenteDetalle
+            path: '/venta/detalle', element: SaleDetail
         }
     ];
 
-export default rutas;
+export default routes;
 

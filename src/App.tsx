@@ -1,20 +1,18 @@
 
 import "./App.css";
-import { createBrowserRouter, Route, RouterProvider, Routes,  } from "react-router-dom";
-import rutas from "./router-config";
+import { Routes, Route } from "react-router-dom";
+import routes from "./router-config";
 
-
-const MapeoRutas = rutas.map(elem => <Route key={elem.path} path={elem.path} element={<elem.element/>} ></Route>)
+const MapeoRutas = routes.map(elem => <Route key={elem.path} path={elem.path} element={<elem.element/>} />)
 
 function App() {
   return (
     <div>
       <div className=''>
-			<Routes>
-				{MapeoRutas}
-			</Routes>
+        <Routes>
+          {MapeoRutas}
+        </Routes>
       </div>
-
     </div>
   )
 }

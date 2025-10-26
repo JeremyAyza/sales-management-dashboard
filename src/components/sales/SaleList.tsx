@@ -1,25 +1,25 @@
-import ComponenteListHeader from "../utilidades/Listar/ComponenteListHeader";
-import ComponenteListTableHeadVenta from "../utilidades/Listar/ComponenteListTableHeadVenta";
-import ComponenteListTableRowVentasD from "../utilidades/Listar/ComponenteListTableRowVentasD";
-import ComponenteNav from "../utilidades/Nav/ComponenteNav";
+import ListHeader from "../shared/lists/ListHeader";
+import SaleTableHead from "../shared/lists/SaleTableHead";
+import SaleDetailTableRow from "../shared/lists/SaleDetailTableRow";
+import Navigation from "../shared/navigation/Navigation";
 
 export default function ComponenteVentas() {
   return (
     <div>
             
-      <ComponenteNav></ComponenteNav>
+      <Navigation></Navigation>
       <div className="container p-3 border mt-2">
-        <ComponenteListHeader
+        <ListHeader
           rutaReg="/venta/nuevaventa"
           entidad="venta"
-        ></ComponenteListHeader>
+        ></ListHeader>
         <div className="table-responsive py-4">
           <table className="table table-striped">
-            <ComponenteListTableHeadVenta
+            <SaleTableHead
               lista={["ID", "Cliente", "Total", "F.Creacion"]}
-            ></ComponenteListTableHeadVenta>
+            ></SaleTableHead>
             <tbody>
-              <ComponenteListTableRowVentasD
+              <SaleDetailTableRow
                 ruta="/venta/detalle"
                 datos={[
                   "1",
@@ -27,8 +27,8 @@ export default function ComponenteVentas() {
                   "1500.00",
                   "20/08/2022",
                 ]}
-              ></ComponenteListTableRowVentasD>
-              <ComponenteListTableRowVentasD
+              ></SaleDetailTableRow>
+              <SaleDetailTableRow
                 ruta="/venta/detalle"
                 datos={[
                   "2",
@@ -36,11 +36,11 @@ export default function ComponenteVentas() {
                   "500.00",
                   "20/08/2022",
                 ]}
-              ></ComponenteListTableRowVentasD>
-              <ComponenteListTableRowVentasD
+              ></SaleDetailTableRow>
+              <SaleDetailTableRow
                 ruta="/venta/detalle"
                 datos={["3", "Angel Nieto Guerra", "3500.00", "20/08/2022"]}
-              ></ComponenteListTableRowVentasD>
+              ></SaleDetailTableRow>
             </tbody>
           </table>
         </div>
